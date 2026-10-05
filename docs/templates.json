@@ -1,0 +1,479 @@
+[
+    {
+        "id": "nextjs",
+        "name": "Next.js",
+        "description": "React framework with SSR, App Router and file-based routing",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-next-app@latest {PROJECT_NAME} --yes",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "shadcn",
+                "name": "shadcn/ui",
+                "command": "{PACKAGE_MANAGER.command} shadcn@latest init -t next -n {PROJECT_NAME} --preset {PRESET}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ],
+                "additionalParameters": [
+                    {
+                        "id": "preset",
+                        "optional": false,
+                        "description": "shadcn/ui Preset",
+                        "type": "select",
+                        "options": [
+                            "nova",
+                            "vega",
+                            "maia",
+                            "lyra",
+                            "mira"
+                        ],
+                        "parameterKey": "PRESET",
+                        "wizardParameter": {
+                            "default": "preset",
+                            "shorthand": "p"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "react-vite",
+        "name": "React + Vite",
+        "description": "React with Vite bundler and TypeScript",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-vite@latest {PROJECT_NAME} -- --template react-ts",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "shadcn",
+                "name": "shadcn/ui",
+                "command": "{PACKAGE_MANAGER.command} shadcn@latest init -t vite -n {PROJECT_NAME} --preset {PRESET}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ],
+                "additionalParameters": [
+                    {
+                        "id": "preset",
+                        "optional": false,
+                        "description": "shadcn/ui Preset",
+                        "type": "select",
+                        "options": [
+                            "nova",
+                            "vega",
+                            "maia",
+                            "lyra",
+                            "mira"
+                        ],
+                        "parameterKey": "PRESET",
+                        "wizardParameter": {
+                            "default": "preset",
+                            "shorthand": "p"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "tanstack-start",
+        "name": "TanStack Start",
+        "description": "Full-stack React framework by TanStack",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} @tanstack/cli@latest create {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "shadcn",
+                "name": "shadcn/ui",
+                "command": "{PACKAGE_MANAGER.command} shadcn@latest init -t start -n {PROJECT_NAME} --preset {PRESET}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ],
+                "additionalParameters": [
+                    {
+                        "id": "preset",
+                        "optional": false,
+                        "description": "shadcn/ui Preset",
+                        "type": "select",
+                        "options": [
+                            "nova",
+                            "vega",
+                            "maia",
+                            "lyra",
+                            "mira"
+                        ],
+                        "parameterKey": "PRESET",
+                        "wizardParameter": {
+                            "default": "preset",
+                            "shorthand": "p"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "tanstack-router",
+        "name": "TanStack Router",
+        "description": "Type-safe router for React applications",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-tsrouter-app@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "shadcn",
+                "name": "shadcn/ui + Tailwind",
+                "command": "{PACKAGE_MANAGER.command} create-tsrouter-app@latest {PROJECT_NAME} --template file-router --tailwind --add-ons shadcn",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "react-router",
+        "name": "React Router",
+        "description": "Full-stack React framework built on React Router v7",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-react-router@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "shadcn",
+                "name": "shadcn/ui",
+                "command": "{PACKAGE_MANAGER.command} shadcn@latest init -t react-router -n {PROJECT_NAME} --preset {PRESET}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ],
+                "additionalParameters": [
+                    {
+                        "id": "preset",
+                        "optional": false,
+                        "description": "shadcn/ui Preset",
+                        "type": "select",
+                        "options": [
+                            "nova",
+                            "vega",
+                            "maia",
+                            "lyra",
+                            "mira"
+                        ],
+                        "parameterKey": "PRESET",
+                        "wizardParameter": {
+                            "default": "preset",
+                            "shorthand": "p"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "astro",
+        "name": "Astro",
+        "description": "Content-focused web framework with island architecture",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-astro@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            },
+            {
+                "type": "tailwind-react",
+                "name": "Tailwind + React",
+                "command": "{PACKAGE_MANAGER.command} create-astro@latest {PROJECT_NAME} -- --template with-tailwindcss --install --add react --git",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "sveltekit",
+        "name": "SvelteKit",
+        "description": "Full-stack framework built on Svelte",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} sv@latest create {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "remix",
+        "name": "Remix",
+        "description": "Full-stack web framework focused on web standards",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-remix@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "hono",
+        "name": "Hono",
+        "description": "Fast, lightweight web framework for the Edge",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-hono@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "elysia",
+        "name": "Elysia",
+        "description": "Ergonomic TypeScript framework for Bun (Bun only)",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "mkdir -p {PROJECT_NAME} && cd {PROJECT_NAME} && bun create elysia app",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bun",
+                        "commandParam": "bun"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "expo",
+        "name": "Expo",
+        "description": "React Native framework for iOS and Android",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-expo-app@latest {PROJECT_NAME}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "tauri",
+        "name": "Tauri",
+        "description": "Build desktop apps with web frontend and Rust backend",
+        "hidden": false,
+        "variants": [
+            {
+                "type": "default",
+                "name": "Default",
+                "command": "{PACKAGE_MANAGER.command} create-tauri-app@latest {PROJECT_NAME} --yes --manager {PACKAGE_MANAGER.commandParam}",
+                "supportedPackageManagers": [
+                    {
+                        "name": "bun",
+                        "command": "bunx --bun",
+                        "commandParam": "bun"
+                    },
+                    {
+                        "name": "pnpm",
+                        "command": "pnpm dlx",
+                        "commandParam": "pnpm"
+                    }
+                ]
+            }
+        ]
+    }
+]

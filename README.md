@@ -36,14 +36,14 @@ When you have dozens (or hundreds) of projects spread across multiple directorie
 - [Bun](https://bun.sh) - for building from source
 - [OrbStack](https://orbstack.dev) or Docker Desktop - for Docker features (optional)
 
-> **Linux support is experimental.** Terminal tab opening has been tested on Ubuntu with Ptyxis, Konsole, tmux, and Zellij. If you encounter issues on your distribution, please [open an issue](https://github.com/kerdofficial/wd/issues).
+> **Linux support is experimental.** Terminal tab opening has been tested on Ubuntu with Ptyxis, Konsole, tmux, and Zellij. If you encounter issues on your distribution, please [open an issue](https://github.com/kerddotdev/wd/issues).
 
 ## Installation
 
 ### Homebrew (recommended)
 
 ```sh
-brew install kerdofficial/tap/wd
+brew install kerddotdev/tap/wd
 ```
 
 Then run first-time setup:
@@ -63,7 +63,7 @@ brew update && brew upgrade wd
 ### Manual
 
 ```sh
-git clone https://github.com/kerdofficial/wd
+git clone https://github.com/kerddotdev/wd
 cd wd
 bun install
 bun run build
@@ -157,7 +157,7 @@ Multiplexers (tmux, Zellij) are detected first, so they work inside any terminal
 - **[cmux](https://cmux.com) support** - native integration with cmux's Unix socket API for workspace/pane/tab management, purpose-built for AI coding agent workflows
 - **Redesigned workspace tab layout** - a new tab configuration system in the Project Constructor, designed to take advantage of cmux's workspace/pane hierarchy and split views
 
-`wd new` loads templates from a default remote source, merges them with local templates from `~/.config/wd/templates/`, caches remote templates locally, and then runs the selected template command with your chosen options.
+`wd new` loads templates from [the default remote catalog](docs/templates.json), merges them with local templates from `~/.config/wd/templates/`, caches remote templates locally, and then runs the selected template command with your chosen options.
 
 ## Configuration
 

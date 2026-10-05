@@ -1,5 +1,5 @@
 /**
- * Template loading: gist fetch + custom local templates + merge.
+ * Template loading: remote fetch + custom local templates + merge.
  * Custom template IDs must not collide with gist template IDs.
  *
  * Template source is determined by TEMPLATES_SOURCE_URL (constant below).
@@ -22,7 +22,7 @@ import {
 
 // ─── Source URL ───────────────────────────────────────────────────────────────
 export const TEMPLATES_SOURCE_URL =
-  "https://gist.githubusercontent.com/kerdofficial/8d6fc38b5427ed59a7fcc8964c70fd10/raw/";
+  "https://raw.githubusercontent.com/kerddotdev/wd/main/docs/templates.json";
 
 // ─── Template source fetch ────────────────────────────────────────────────────
 
