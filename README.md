@@ -1,6 +1,6 @@
 # wd - Workspace Director
 
-![Version](https://img.shields.io/badge/version-1.4.0-blue)
+![Version](https://img.shields.io/badge/version-1.4.1-blue)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
