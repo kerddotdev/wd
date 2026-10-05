@@ -493,7 +493,7 @@ If a project path no longer exists, `wd open` exits with a clear error.
 - macOS asks for Automation permission the first time `wd` opens tabs with AppleScript.
 
 **Linux notes:**
-- Linux terminal support is experimental. If you encounter issues, please [open an issue](https://github.com/kerdofficial/wd/issues).
+- Linux terminal support is experimental. If you encounter issues, please [open an issue](https://github.com/kerddotdev/wd/issues).
 - **kitty** requires remote control to be enabled. Add `allow_remote_control yes` to `~/.config/kitty/kitty.conf` and restart kitty. See [kitty remote control docs](https://sw.kovidgoyal.net/kitty/remote-control/).
 - **Konsole** uses D-Bus for tab management when `qdbus` is available (pre-installed on most KDE systems). Falls back to CLI otherwise.
 - **GNOME Terminal / Ptyxis**: On Ubuntu 24.04+, the default terminal is Ptyxis (not `gnome-terminal`). `wd` auto-detects which binary is available.
@@ -1061,7 +1061,7 @@ Linux terminal support is experimental. Known limitations:
 - Konsole CLI fallback (without `qdbus`): may open a new window instead of a tab
 - Tab commands in GNOME Terminal / Ptyxis run via `sh -c`, so shell aliases are not available
 
-If you encounter issues with terminal tab opening on Linux, please [open an issue](https://github.com/kerdofficial/wd/issues) with your distribution, terminal emulator, and the output of `env | grep -iE 'term|vte|konsole|zellij|tmux|kitty'`.
+If you encounter issues with terminal tab opening on Linux, please [open an issue](https://github.com/kerddotdev/wd/issues) with your distribution, terminal emulator, and the output of `env | grep -iE 'term|vte|konsole|zellij|tmux|kitty'`.
 
 **`wd open` changed directory but my editor stayed in the old place**
 
