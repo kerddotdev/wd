@@ -64,11 +64,15 @@ jobs:
         run: |
           ARM64_SHA=$(sha256sum dist/wd-macos-arm64.tar.gz | cut -d' ' -f1)
           X64_SHA=$(sha256sum dist/wd-macos-x64.tar.gz | cut -d' ' -f1)
+          LINUX_ARM64_SHA=$(sha256sum dist/wd-linux-arm64.tar.gz | cut -d' ' -f1)
+          LINUX_X64_SHA=$(sha256sum dist/wd-linux-x64.tar.gz | cut -d' ' -f1)
           VERSION=${GITHUB_REF_NAME#v}
           gh workflow run update-formula.yml \
             --repo kerddotdev/homebrew-tap \
             -f version="$VERSION" \
             -f sha256_arm64="$ARM64_SHA" \
-            -f sha256_x64="$X64_SHA"
+            -f sha256_x64="$X64_SHA" \
+            -f sha256_linux_arm64="$LINUX_ARM64_SHA" \
+            -f sha256_linux_x64="$LINUX_X64_SHA"
         env:
           GH_TOKEN: ${{ secrets.TAP_GITHUB_TOKEN }}
